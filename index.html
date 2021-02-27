@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./tailwind-min.css" />
+    <title>Dayplan - A simple command line tool for daily planning</title>
+  </head>
+  <body class="antialiased text-gray-900">
+    <header
+      class="py-32 px-8 bg-gray-100 flex flex-col items-center justify-center"
+    >
+      <h1 class="text-6xl">dayplan</h1>
+      <p class="mt-4 text-lg text-gray-500">
+        A simple command line tool for daily planning.
+      </p>
+      <code
+        class="bg-gray-200 flex items-center py-2 shadow-inner px-3 mt-6 rounded"
+      >
+        <span><span class="select-none mr-2">$</span>npm i -g dayplan </span>
+        <svg
+          class="w-6 h-6 opacity-50 ml-2 cursor-pointer transition hover:opacity-100"
+          onclick="copyToClipboard('npm i -g dayplan')"
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="currentColor"
+          fill="none"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="{2}"
+            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+          />
+        </svg>
+      </code>
+    </header>
+
+    <main class="flex flex-col items-center justify-center py-16 px-8">
+      <div class="rounded-md shadow-xl overflow-hidden">
+        <iframe
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          src="https://www.youtube.com/embed/WlWZTTfzArs"
+          allowfullscreen
+          frameborder="0"
+          height="533"
+          width="1280"
+        ></iframe>
+      </div>
+
+      <div class="mt-16">
+        <div class="flex items-center space-x-4">
+          <a
+            href="https://github.com/albingroen/dayplan/blob/main/README.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-500 font-medium hover:underline"
+            href=""
+            >Documentation</a
+          >
+          <span class="text-gray-400">&bull;</span>
+          <a
+            href="https://npmjs.com/package/dayplan"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-500 font-medium hover:underline"
+            href=""
+            >NPM</a
+          >
+          <span class="text-gray-400">&bull;</span>
+          <a
+            href="https://albingroen.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-500 font-medium hover:underline"
+            href=""
+            >Author</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function copyToClipboard(value) {
+        const el = document.createElement("textarea");
+        el.value = value;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand("copy");
+        document.body.removeChild(el);
+        alert("Copied to clipboard!");
+      }
+    </script>
+  </body>
+</html>
